@@ -1,98 +1,48 @@
 local S = minetest.get_translator("stonelike_blocks")
-local groups = { pickaxey = 1, building_block = 1, material_stone = 1, stonecuttable = 1 }
 
-minetest.register_node(":mcl_core:andesite_smoothbrick", {
-	description = S("Smooth Andesite Bricks"),
-	_doc_items_longdesc = S("Smooth andesite bricks are decorative bricks made from smooth andesite."),
-	tiles = { "stonelike_blocks_andesite_bricks.png" },
-	groups = groups,
-	sounds = mcl_sounds.node_sound_stone_defaults(),
-	_mcl_blast_resistance = 6,
-	_mcl_hardness = 1.5,
-	_mcl_stonecutter_recipes = { "mcl_core:andesite", "mcl_core:andesite_smooth" }
-})
+stonelike_blocks = {}
+stonelike_blocks.blocks = { "andesite", "diorite", "granite" }
 
-minetest.register_node(":mcl_core:diorite_smoothbrick", {
-	description = S("Smooth Diorite Bricks"),
-	_doc_items_longdesc = S("Smooth diorite bricks are decorative bricks made from smooth diorite."),
-	tiles = { "stonelike_blocks_diorite_bricks.png" },
-	groups = groups,
-	sounds = mcl_sounds.node_sound_stone_defaults(),
-	_mcl_blast_resistance = 6,
-	_mcl_hardness = 1.5,
-	_mcl_stonecutter_recipes = { "mcl_core:diorite", "mcl_core:diorite_smooth" }
-})
+local function make_desc(name)
+	return name:sub(1,1):upper()..name:sub(2)
+end
 
-minetest.register_node(":mcl_core:granite_smoothbrick", {
-	description = S("Smooth Granite Bricks"),
-	_doc_items_longdesc = S("Smooth granite bricks are decorative bricks made from smooth granite."),
-	tiles = { "stonelike_blocks_granite_bricks.png" },
-	groups = groups,
-	sounds = mcl_sounds.node_sound_stone_defaults(),
-	_mcl_blast_resistance = 6,
-	_mcl_hardness = 1.5,
-	_mcl_stonecutter_recipes = { "mcl_core:granite", "mcl_core:granite_smooth" }
-})
+for _, name in pairs(stonelike_blocks.blocks) do
+	local desc = make_desc(name)
 
-mcl_stairs.register_stair_and_slab("andesite_smoothbrick", {
-	baseitem = "mcl_core:andesite_smoothbrick",
-	description_stair = S("Smooth Andesite Bricks Stairs"),
-	description_slab = S("Smooth Andesite Bricks Slab"),
-	overrides = {_mcl_stonecutter_recipes = { "mcl_core:andesite", "mcl_core:andesite_smooth", "mcl_core:andesite_smoothbrick" }},
-})
+	minetest.register_node(":mcl_core:"..name.."_smoothbrick", {
+		description = S("Smooth @1 Bricks", desc),
+		_doc_items_longdesc = S("Smooth @1 bricks are decorative bricks made from smooth @1.", name),
+		tiles = { "stonelike_blocks_"..name.."_bricks.png" },
+		groups = { pickaxey = 1, building_block = 1, material_stone = 1, stonecuttable = 1 },
+		sounds = mcl_sounds.node_sound_stone_defaults(),
+		_mcl_blast_resistance = 6,
+		_mcl_hardness = 1.5,
+		_mcl_stonecutter_recipes = { "mcl_core:"..name, "mcl_core:"..name.."_smooth" }
+	})
 
-mcl_stairs.register_stair_and_slab("diorite_smoothbrick", {
-	baseitem = "mcl_core:diorite_smoothbrick",
-	description_stair = S("Smooth Diorite Bricks Stairs"),
-	description_slab = S("Smooth Diorite Bricks Slab"),
-	overrides = {_mcl_stonecutter_recipes = { "mcl_core:diorite", "mcl_core:diorite_smooth", "mcl_core:diorite_smoothbrick" }},
-})
+	mcl_stairs.register_stair_and_slab(name.."_smoothbrick", {
+		baseitem = "mcl_core:"..name.."_smoothbrick",
+		description_stair = S("Smooth @1 Bricks Stairs", desc),
+		description_slab = S("Smooth @1 Bricks Slab", desc),
+		overrides = { _mcl_stonecutter_recipes = {
+			"mcl_core:"..name, "mcl_core:"..name.."_smooth", "mcl_core:"..name.."_smoothbrick"
+		}}
+	})
 
-mcl_stairs.register_stair_and_slab("granite_smoothbrick", {
-	baseitem = "mcl_core:granite_smoothbrick",
-	description_stair = S("Smooth Granite Bricks Stairs"),
-	description_slab = S("Smooth Granite Bricks Slab"),
-	overrides = {_mcl_stonecutter_recipes = { "mcl_core:granite", "mcl_core:granite_smooth", "mcl_core:granite_smoothbrick" }},
-})
+	mcl_walls.register_wall_def("stonelike_blocks:"..name.."smoothbrick", {
+		description = S("Smooth @1 Bricks Wall", desc),
+		source = "mcl_core:"..name.."_smoothbrick",
+		overrides = { _mcl_stonecutter_recipes = {
+			"mcl_core:"..name, "mcl_core:"..name.."_smooth", "mcl_core:"..name.."_smoothbrick"
+		}}
+	})
 
-mcl_walls.register_wall_def("stonelike_blocks:andesitesmoothbrick", {
-	description = S("Smooth Andesite Bricks Wall"),
-	source = "mcl_core:andesite_smoothbrick",
-	_mcl_stonecutter_recipes = { "mcl_core:andesite_smooth", "mcl_core:andesite_smoothbrick" },
-})
-
-mcl_walls.register_wall_def("stonelike_blocks:dioritesmoothbrick", {
-	description = S("Smooth Diorite Bricks Wall"),
-	source = "mcl_core:diorite_smoothbrick",
-	_mcl_stonecutter_recipes = { "mcl_core:diorite_smooth", "mcl_core:diorite_smoothbrick" },
-})
-
-mcl_walls.register_wall_def("stonelike_blocks:granitesmoothbrick", {
-	description = S("Smooth Granite Bricks Wall"),
-	source = "mcl_core:granite_smoothbrick",
-	_mcl_stonecutter_recipes = { "mcl_core:granite_smooth", "mcl_core:granite_smoothbrick" },
-})
-
-minetest.register_craft({
-	output = "mcl_core:andesite_smoothbrick 4",
-	recipe = {
-		{ "mcl_core:andesite_smooth", "mcl_core:andesite_smooth" },
-		{ "mcl_core:andesite_smooth", "mcl_core:andesite_smooth" }
-	}
-})
-
-minetest.register_craft({
-	output = "mcl_core:diorite_smoothbrick 4",
-	recipe = {
-		{ "mcl_core:diorite_smooth", "mcl_core:diorite_smooth" },
-		{ "mcl_core:diorite_smooth", "mcl_core:diorite_smooth" }
-	}
-})
-
-minetest.register_craft({
-	output = "mcl_core:granite_smoothbrick 4",
-	recipe = {
-		{ "mcl_core:granite_smooth", "mcl_core:granite_smooth" },
-		{ "mcl_core:granite_smooth", "mcl_core:granite_smooth" }
-	}
-})
+	minetest.register_craft({
+		output = "mcl_core:"..name.."_smoothbrick 4",
+		recipe = {
+			{ "mcl_core:"..name.."_smooth", "mcl_core:"..name.."_smooth" },
+			{ "mcl_core:"..name.."_smooth", "mcl_core:"..name.."_smooth" }
+		}
+	})
+end

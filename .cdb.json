@@ -1,0 +1,19 @@
+{
+    "content_warnings": [],
+    "dev_state": "ACTIVELY_DEVELOPED",
+    "donate_url": "https://github.com/sponsors/JoseDouglas26",
+    "forums": null,
+    "issue_tracker": "https://github.com/JoseDouglas26/stonelike_blocks/issues",
+    "license": "MIT",
+    "long_description": "# Stone-like Blocks for Mineclonia (stonelike_blocks)\n## Description\nAdds polished bricks for andesite, diorite and granite. These blocks can be crafted from it's ```polished``` counterparts. They have variants of stairs, slabs and walls.\n### Crafting\n[ \\[<span style=\"color:red\">**Polished**</span>\\] \\[<span style=\"color:red\">**Polished**</span>\\] ] <br>\n[ \\[<span style=\"color:red\">**Polished**</span>\\] \\[<span style=\"color:red\">**Polished**</span>\\] ] &rarr; [<span style=\"color:red\">**Polished bricks 4**</span>]",
+    "media_license": "CC0-1.0",
+    "name": "stonelike_blocks",
+    "repo": "https://github.com/JoseDouglas26/stonelike_blocks",
+    "short_description": "Adds polished bricks for andesite, diorite and granite.",
+    "tags": ["building", "decorative"],
+    "title": "Stone-like Blocks for Mineclonia",
+    "translation_url": null,
+    "type": "MOD",
+    "video_url": null,
+    "website": null
+}
