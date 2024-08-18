@@ -55,24 +55,21 @@ mcl_stairs.register_stair_and_slab("granite_smoothbrick", {
 	overrides = {_mcl_stonecutter_recipes = { "mcl_core:granite", "mcl_core:granite_smooth", "mcl_core:granite_smoothbrick" }},
 })
 
-mcl_walls.register_wall_def(":mcl_core:andesitesmoothbrick", {
+mcl_walls.register_wall_def("stonelike_blocks:andesitesmoothbrick", {
 	description = S("Smooth Andesite Bricks Wall"),
 	source = "mcl_core:andesite_smoothbrick",
-	groups = { pickaxey = 1 },
 	_mcl_stonecutter_recipes = { "mcl_core:andesite_smooth", "mcl_core:andesite_smoothbrick" },
 })
 
-mcl_walls.register_wall_def(":mcl_core:dioritesmoothbrick", {
+mcl_walls.register_wall_def("stonelike_blocks:dioritesmoothbrick", {
 	description = S("Smooth Diorite Bricks Wall"),
 	source = "mcl_core:diorite_smoothbrick",
-	groups = { pickaxey = 1 },
 	_mcl_stonecutter_recipes = { "mcl_core:diorite_smooth", "mcl_core:diorite_smoothbrick" },
 })
 
-mcl_walls.register_wall_def(":mcl_core:granitesmoothbrick", {
+mcl_walls.register_wall_def("stonelike_blocks:granitesmoothbrick", {
 	description = S("Smooth Granite Bricks Wall"),
 	source = "mcl_core:granite_smoothbrick",
-	groups = { pickaxey = 1 },
 	_mcl_stonecutter_recipes = { "mcl_core:granite_smooth", "mcl_core:granite_smoothbrick" },
 })
 
