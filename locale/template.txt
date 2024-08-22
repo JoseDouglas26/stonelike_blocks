@@ -1,0 +1,7 @@
+# textdomain: stonelike_blocks
+
+Stone-like Blocks for Mineclonia =
+Adds polished bricks for andesite, diorite and granite. =
+
+Smooth @1 Bricks=
+Smooth @1 bricks are decorative bricks made from smooth @2.=

@@ -12,7 +12,7 @@ for _, name in pairs(stonelike_blocks.blocks) do
 
 	minetest.register_node(":mcl_core:"..name.."_smoothbrick", {
 		description = S("Smooth @1 Bricks", desc),
-		_doc_items_longdesc = S("Smooth @1 bricks are decorative bricks made from smooth @1.", name),
+		_doc_items_longdesc = S("Smooth @1 bricks are decorative bricks made from smooth @2.", name, name),
 		tiles = { "stonelike_blocks_"..name.."_bricks.png" },
 		groups = { pickaxey = 1, building_block = 1, material_stone = 1, stonecuttable = 1 },
 		sounds = mcl_sounds.node_sound_stone_defaults(),
