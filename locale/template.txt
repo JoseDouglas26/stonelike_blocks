@@ -5,3 +5,6 @@ Adds polished bricks for andesite, diorite and granite. =
 
 Smooth @1 Bricks=
 Smooth @1 bricks are decorative bricks made from smooth @2.=
+Smooth @1 Bricks Stairs=
+Smooth @1 Bricks Slab=
+Smooth @1 Bricks Wall=
