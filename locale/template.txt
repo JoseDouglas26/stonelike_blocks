@@ -8,3 +8,5 @@ Smooth @1 bricks are decorative bricks made from smooth @2.=
 Smooth @1 Bricks Stairs=
 Smooth @1 Bricks Slab=
 Smooth @1 Bricks Wall=
+Smooth Chiseled @1=
+Smooth Chiseled @1 is the chiseled version of smooth @2.=

@@ -5,7 +5,7 @@
     "forums": null,
     "issue_tracker": "https://github.com/JoseDouglas26/stonelike_blocks/issues",
     "license": "MIT",
-    "long_description": "# Stone-like Blocks for Mineclonia (stonelike_blocks)\n## Description\nAdds polished bricks for andesite, diorite and granite. These blocks can be crafted from it's ```polished``` counterparts. They have variants of stairs, slabs and walls.\n### Crafting\n[ \\[<span style=\"color:red\">**Polished**</span>\\] \\[<span style=\"color:red\">**Polished**</span>\\] ] <br>\n[ \\[<span style=\"color:red\">**Polished**</span>\\] \\[<span style=\"color:red\">**Polished**</span>\\] ] &rarr; [<span style=\"color:red\">**Polished bricks 4**</span>]",
+    "long_description": "# Stone-like Blocks for Mineclonia (stonelike_blocks)\n## Description\nAdds polished bricks for andesite, diorite and granite. These blocks can be crafted from it's ```polished``` counterparts. They have variants of stairs, slabs and walls.\n### Crafting\n[ \\[<span style=\"color:red\">**Polished**</span>\\] \\[<span style=\"color:red\">**Polished**</span>\\] ] <br>\n[ \\[<span style=\"color:red\">**Polished**</span>\\] \\[<span style=\"color:red\">**Polished**</span>\\] ] &rarr; [<span style=\"color:red\">**Polished bricks 4**</span>]\n\n[ <span style=\"color:red\">**Smooth Slab**</span> ]<br>[ <span style=\"color:red\">**Smooth Slab**</span> ] &rarr [ <span style=\"color:red\">**Smooth Chiseled**</span> ]",
     "media_license": "CC0-1.0",
     "name": "stonelike_blocks",
     "repo": "https://github.com/JoseDouglas26/stonelike_blocks",

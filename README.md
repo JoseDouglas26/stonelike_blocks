@@ -5,3 +5,6 @@ Adds polished bricks for andesite, diorite and granite. These blocks can be craf
 ### Crafting
 [ \[<span style="color:red">**Polished**</span>\] \[<span style="color:red">**Polished**</span>\] ] <br>
 [ \[<span style="color:red">**Polished**</span>\] \[<span style="color:red">**Polished**</span>\] ] &rarr; [<span style="color:red">**Polished bricks 4**</span>]
+
+[ <span style="color:red">**Smooth Slab**</span> ]<br>
+[ <span style="color:red">**Smooth Slab**</span> ] &rarr; [ <span style="color:red">**Smooth Chiseled**</span> ]

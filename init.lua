@@ -21,6 +21,17 @@ for _, name in pairs(stonelike_blocks.blocks) do
 		_mcl_stonecutter_recipes = { "mcl_core:"..name, "mcl_core:"..name.."_smooth" }
 	})
 
+	minetest.register_node(":mcl_core:"..name.."_smoothcarved", {
+		description = S("Smooth Chiseled @1", desc),
+		_doc_items_longdesc = S("Smooth Chiseled @1 is the chiseled version of smooth @2.", desc, name),
+		tiles = { "stonelike_blocks_"..name.."_chiseled.png" },
+		groups = { pickaxey = 1, building_block = 1, material_stone = 1 },
+		sounds = mcl_sounds.node_sound_stone_defaults(),
+		_mcl_blast_resistance = 6,
+		_mcl_hardness = 1.5,
+		_mcl_stonecutter_recipes = { "mcl_core:"..name, "mcl_core:"..name.."_smooth" }
+	})
+
 	mcl_stairs.register_stair_and_slab(name.."_smoothbrick", {
 		baseitem = "mcl_core:"..name.."_smoothbrick",
 		description_stair = S("Smooth @1 Bricks Stairs", desc),
@@ -43,6 +54,14 @@ for _, name in pairs(stonelike_blocks.blocks) do
 		recipe = {
 			{ "mcl_core:"..name.."_smooth", "mcl_core:"..name.."_smooth" },
 			{ "mcl_core:"..name.."_smooth", "mcl_core:"..name.."_smooth" }
+		}
+	})
+
+	minetest.register_craft({
+		output = "mcl_core:"..name.."_smoothcarved",
+		recipe = {
+			{ "mcl_stairs:slab_"..name.."_smooth" },
+			{ "mcl_stairs:slab_"..name.."_smooth" }
 		}
 	})
 end
